@@ -1,0 +1,441 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tenant",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "district",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "street",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "apartmentNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "Rent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tenant",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "district",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "street",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "apartmentNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "Terminate",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "agreements",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "tenant",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "city",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "district",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "street",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "buildingNumber",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "apartmentNumber",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"internalType": "struct Rental",
+						"name": "rental",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numberOfRentals",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tenant",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_district",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_street",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_apartmentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "rent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "rentalProperties",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "tenant",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "district",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "street",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "apartmentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tenant",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_district",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_street",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_apartmentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "reportIssue",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tenant",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_district",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_street",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_buildingNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_apartmentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "terminate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RealEstate.sol": "RentalAgreement"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RealEstate.sol": {
+			"keccak256": "0x7eb0d23eeac60ae3e5b8d0a8a3721330d08d503d8091e89f8ef48074180d4a98",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d75c7ec0e4878f5d5331e93955d3dc300ceb3a7ba337557cd228c71d4e8dd47e",
+				"dweb:/ipfs/QmY6VARng65cqtNcfEFKGqAywFH6Pope78QxpC7PErs8JQ"
+			]
+		}
+	},
+	"version": 1
+}

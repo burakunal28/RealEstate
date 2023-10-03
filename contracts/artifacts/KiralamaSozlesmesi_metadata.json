@@ -1,0 +1,478 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "kiraci",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sahip",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "sehir",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ilce",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "mahalle",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "sokak",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "binaNo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "daireNo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "baslangicTarihi",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "bitisTarihi",
+						"type": "string"
+					}
+				],
+				"name": "Kiralama",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "kiraci",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sahip",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "sehir",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ilce",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "mahalle",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "sokak",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "binaNo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "daireNo",
+						"type": "uint256"
+					}
+				],
+				"name": "Sonlandir",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_kiraci",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_sehir",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ilce",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_mahalle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sokak",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_binaNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_daireNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_sahip",
+						"type": "address"
+					}
+				],
+				"name": "hataBildir",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_kiraci",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_sehir",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ilce",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_mahalle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sokak",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_binaNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_daireNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_sahip",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_baslangicTarihi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bitisTarihi",
+						"type": "string"
+					}
+				],
+				"name": "kirala",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kiralikSayisi",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "kiralikYerler",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "kiraci",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "sehir",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ilce",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "mahalle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sokak",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "binaNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daireNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "sahip",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kontratSahibi",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_kiraci",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_sehir",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ilce",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_mahalle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sokak",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_binaNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_daireNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_sahip",
+						"type": "address"
+					}
+				],
+				"name": "sonlandir",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "sozlesmeler",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "kiraci",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "sehir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "ilce",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "mahalle",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "sokak",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "binaNo",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "daireNo",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "sahip",
+								"type": "address"
+							}
+						],
+						"internalType": "struct Kiralik",
+						"name": "kiralik",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "baslangicTarihi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "bitisTarihi",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RealEstate.sol": "KiralamaSozlesmesi"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RealEstate.sol": {
+			"keccak256": "0x743d5053b7b907b8591ebb1a4915e8b2e17f70e4ccfd4397b0d1dad931d9886e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3fb2c22cd7410d37f35e4665f7a1ad5804a641f0293d75e1a546ed74981239a",
+				"dweb:/ipfs/Qma5hWTYrRzYrG64PbjPx83igMy69zN4edEpmjCWrq93Ci"
+			]
+		}
+	},
+	"version": 1
+}
